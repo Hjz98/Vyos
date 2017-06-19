@@ -1,0 +1,11 @@
+#Curl groupcreate
+curl -u jz:password -i -H "Content-Type: application/json" -X POST -d '{"ip":"192.168.0.1","uname":"vyos.","passw":"Passw0rd!","portq":"22","netname":"NETWORK1","netadmask":"192.168.100.0/24"}' http://localhost:5000/groupcreate
+
+#Curl groupread
+curl -u jz:password -i -H "Content-Type: application/json" -X POST -d '{"ip":"192.168.0.1","uname":"vyos","passw":"Passw0rd!","portq":"22"}' http://localhost:5000/groupread
+
+#Curl groupupdate
+curl -u jz:password -i -H "Content-Type: application/json" -X POST -d '{"ip":"192.168.0.1","uname":"vyos","passw":"Passw0rd!","portq":"22","delgroup":"NETWORK1","netname":"NETWORK1","netadmask":"192.168.200.0/24"}' http://localhost:5000/groupupdate
+
+#Curl groupdelete
+curl -u jz:password -i -H "Content-Type: application/json" -X POST -d '{"ip":"192.168.0.1","uname":"vyos","passw":"Passw0rd!","portq":"22","delgroup":"NETWORK1"}' http://localhost:5000/groupdelete
