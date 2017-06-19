@@ -1,0 +1,11 @@
+#curl for staticcreate
+curl -u jz:password -i -H "Content-Type: application/json" -X POST -d '{"ip":"192.168.0.1", "uname":"vyos", "passw":"Passw0rd!", "portq":"22", "staticnet":"192.168.1.0/24" , "nexthop":"192.168.0.1"}' http://localhost:5000/staticcreate
+
+#curl for staticread
+curl -u jz:password -i -H "Content-Type: application/json" -X POST -d '{"ip":"192.168.0.1", "uname":"vyos", "passw":"Passw0rd!", "portq":"22"}' http://localhost:5000/staticread
+
+#curl for staticupdate
+curl -u jz:password -i -H "Content-Type: application/json" -X POST -d '{"ip":"192.168.0.1", "uname":"vyos", "passw":"Passw0rd!", "portq":"22","delstatmask":"192.168.1.0/24","staticnet":"192.168.2.0/24" , "nexthop":"192.168.0.1"}' http://localhost:5000/staticupdate
+
+#curl for staticdelete
+curl -u jz:password -i -H "Content-Type: application/json" -X POST -d '{"ip":"192.168.0.1", "uname":"vyos", "passw":"Passw0rd!", "portq":"22","delstatmask":"192.168.1.0/24"}' http://localhost:5000/staticdelete
