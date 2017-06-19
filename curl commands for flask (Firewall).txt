@@ -1,0 +1,12 @@
+#curl for firecreate
+curl -u jz:password -i -H "Content-Type: application/json" -X POST -d '{"ip":"192.168.0.1", "uname":"vyos", "passw":"Passw0rd!", "portq":"22", "rname":"IN-OUT","rule":"123","action":"accept","rgroup":"NETWORK1"}'
+http://localhost:5000/firecreate
+
+#curl for fireread
+curl -u jz:password -i -H "Content-Type: application/json" -X POST -d '{"ip":"192.168.0.1", "uname":"vyos", "passw":"Passw0rd!", "portq":"22"}' http://localhost:5000/fireread
+
+#curl for fireupdate
+curl -u jz:password -i -H "Content-Type: application/json" -X POST -d '{"ip":"192.168.0.1", "uname":"vyos", "passw":"Passw0rd!", "portq":"22","dername":"IN-OUT","drule":"130","rname":"IN-OUT","rule":"130","action":"drop","rgroup":"NETWORK1"}' http://localhost:5000/fireupdate
+
+#curl for firedelete
+curl -u jz:password -i -H "Content-Type: application/json" -X POST -d '{"ip":"192.168.0.1", "uname":"vyos", "passw":"Passw0rd!", "portq":"22","dername":"IN-OUT"}' http://localhost:5000/firedelete
